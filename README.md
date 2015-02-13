@@ -6,7 +6,7 @@
   <li>A bipolar stepper motor (like <a href="https://www.pololu.com/product/1207" target="_blank">this one</a>)</li>
 </ul>
 
-<h3>Install</h3>
+<h3>Install <i>(not active just yet)</i></h3>
 <pre>npm install tessel-stepper-4988v1</pre>
 
 <h3>Wiring</h3>
