@@ -7,7 +7,7 @@
 </ul>
 
 <h3>Install</h3>
-<pre>npm install stepper-4988v1</pre>
+<pre>npm install tessel-stepper-4988v1</pre>
 
 <h3>Wiring</h3>
 <p>Do make sure to follow the schematic on the product page for the chip.<p>
