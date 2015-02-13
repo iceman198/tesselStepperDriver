@@ -1,0 +1,26 @@
+{
+  "name": "stepper-4988v1",
+  "version": "1.0.0",
+  "description": "Stepper driver module for tessel",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "tessel",
+    "stepper",
+	"motor",
+	"stepper motor"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean Dutton",
+  "maintainers": [
+    {
+      "name": "iceman198",
+      "email": "webmaster@duttonbiz.com"
+    }
+  ],
+  "homepage": "http://duttonbiz.com/",
+  "license": "ISC"
+}
