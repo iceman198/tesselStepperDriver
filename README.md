@@ -64,7 +64,7 @@ myStepper.on('arrived', function() {
 
 <h3>Events</h3>
 <p>StepperMotor.on('ready') - fired when driver is loaded</p>
-<p>StepperMotor.on('arrived') - fired when using the 'moveTo(pos)' function stating the motor has reached is destination</p>
+<p>StepperMotor.on('arrived') - fired when using the 'moveTo(steps, direction)' function stating the motor has reached is destination</p>
 
 <h3>Methods</h3>
 <p>StepperMotor.use(hardware, speed, debug, callback)
@@ -75,7 +75,7 @@ myStepper.on('arrived', function() {
     <li>callback - (OPTIONAL) not currently implemented</li>
   </ul>
 </p>
-<p>StepperMotor.moveTo(steps, direction)
+<p>moveTo(steps, direction)
   <ul>
     <li>steps - [WHOLE NUMBER] the amount of steps you would like the stepper to move</li>
     <li>direction - [WHOLE NUMBER] either 0 or 1...stepper will move clockwise or counter-clockwise</li>
