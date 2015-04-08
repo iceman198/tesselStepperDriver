@@ -67,12 +67,17 @@ myStepper.on('arrived', function() {
 <p>StepperMotor.on('arrived') - fired when using the 'moveTo(pos)' function stating the motor has reached is destination</p>
 
 <h3>Methods</h3>
-<p>StepperMotor.use(hardware, speed, maxposition, debug, callback)
+<p>StepperMotor.use(hardware, speed, debug, callback)
   <ul>
     <li>hardware - what port of the tessel you're using (i.e. tessel.port['A'])</li>
-    <li>speed - (in milliseconds) interval used for the pulse of the motor</li>
-    <li>maxposition - used to limit the motion of the motor; will only move between 0 and 'maxposition'</li>
-    <li>debug - (OPTIONAL) true or false to use console output of the drivers</li>
+    <li>speed - [WHOLE NUMBER] (in milliseconds) interval used for the pulse of the motor</li>
+    <li>debug - [BOOLEAN] (OPTIONAL) true or false to use console output of the drivers</li>
     <li>callback - (OPTIONAL) not currently implemented</li>
+  </ul>
+</p>
+<p>StepperMotor.moveTo(steps, direction)
+  <ul>
+    <li>steps - [WHOLE NUMBER] the amount of steps you would like the stepper to move</li>
+    <li>direction - [WHOLE NUMBER] either 0 or 1...stepper will move clockwise or counter-clockwise</li>
   </ul>
 </p>
