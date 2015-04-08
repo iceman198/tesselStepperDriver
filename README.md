@@ -35,25 +35,26 @@ var tessel = require('tessel');
 var stepperLib = require('stepper-4988v1');
 
 // stepperLib.use
-// 	var HARDWARE = Tessel port (i.e. tessel.port['A'])
+//  var HARDWARE = Tessel port (i.e. tessel.port['A'])
 //  var SPEED = (in milliseconds) pulse rate to spin the stepper - shouldn't go below 10 as the motor may get hot
-//  var MAXPOSITIONCOUNT = limit the range of the motor...when calling the 'moveTo' function, stepper will not go past this count
 //  var DEBUG = OPTIONAL - show console output if TRUE
 //  var CALLBACK = OPTIONAL - not currently implemented
-var myStepper = stepperLib.use(tessel.port['D'], 10, 1000, true);
+var myStepper = stepperLib.use(tessel.port['D'], 10, true);
 
 process.stdin.resume();
-console.log('Type in number (position) you would like the stepper to move to (whole numbers please)');
+console.log('Type in the number of paces and the direction (0 or 1) seperated by a comma (i.e. 50,0) you would like the stepper to move to (whole numbers please)');
 
-process.stdin.on('data', function (pos) {
-	pos = parseFloat(String(pos));
-	console.log('Setting command position:', pos);
-	myStepper.moveTo(pos);
+process.stdin.on('data', function (userInput) {
+	userInput = userInput + " ";
+	var myArr = userInput.split(',');
+	var pos = parseFloat(myArr[0]);
+	var direction = parseFloat(myArr[1]);
+	console.log('Moving ' + pos + ' paces in direction ' + direction);
+	myStepper.moveTo(pos, direction);
 });
 
 myStepper.on('ready', function() {
 	console.log('Stepper is ready');
-	//myStepper.moveTo(200);
 });
 
 myStepper.on('arrived', function() {
