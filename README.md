@@ -1,5 +1,10 @@
 <h1>A4988 Stepper Motor Driver for the tessel.io</h1>
 
+<h3>Some things to note</h3>
+<p>The driver in this example is rated for 8volts...you may want to go with <a href="https://www.pololu.com/product/2134">this</a> driver instead.  I wasn't paying attention when I ordered them.  Wiring looks to be identical.</p>
+<p>You can change the current, definitely read up on the driver's product page and set the current appropriately for the stepper motor you're using.</p>
+<p>The motor does tend to get a little hot.  I leave it on for a bit and it reaches about 103deg F on the outside.  This could be because I'm throwing 8 volts at it (as noted above) instead of the rated 7.4...or I just need to tweak the current...or this is simply the nature of the beast.  Haven't figured it all out just yet so do read up!</p>
+<hr>
 <h3>Hardware</h3>
 <ul>
   <li>Driver board (<a href="https://www.pololu.com/product/1182" target="_blank">this one</a>)</li>
